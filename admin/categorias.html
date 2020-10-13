@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-
 <head>
     <title>
         Carrito de Compras
     </title>
-    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
+
     <meta charset="utf-8">
     <meta keywords="">
     <meta description="">
@@ -14,6 +13,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         -->
     <link rel="stylesheet" type="text/css" href="../estilos/solar.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos/estilos.css">
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
@@ -30,6 +30,35 @@
     <!--HEADER, NAV, Y NO SE QUE MAS -->
     <iframe id="ifHeader" src="header.html" scrolling="no"></iframe>
     <main>
+        		<!-- Formulario "agregar categoría"-->
+			<img id="btoAgregarCat" src="../img/agregar.png" onclick="document.getElementById('id01').style.display='block'">
+
+			<!-- The Modal -->
+			<div id="id01" class="modal">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+				  <!-- Modal Content -->
+				  <form class="modal-content animate" action="">
+				   <div class="form-group">
+							<label for="nombreCat">Nombre de categoría:</label>
+						<input type="text" name="cat_name" id="nombreCat" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="descCat">Descripción:</label>
+				  		<textarea name="descripcion" placeholder="Escribe la descripción de la categoría..." id="descCat" class="form-control"></textarea>
+				  	</div>
+				  	<div class="form-group">
+					    <label for="imgCat">Imagen</label>
+					    <input type="file" class="form-control-file" id="imgCat">
+					</div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+				  </form>
+			</div>
+			<!-- Fin Formulario nueva categoría -->  
         <h2>
             Categorías de productos
         </h2>
