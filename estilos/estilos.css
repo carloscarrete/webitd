@@ -58,8 +58,13 @@ footer div{
   padding-top: 60px;
 }
 
+#id01 form{
+  padding: 40px;
+}
+
 /* Modal Content/Box */
 .modal-content {
+  padding: 40px;
   background-color: #fefefe;
   margin: 5px auto; /* 15% from the top and centered */
   border: 1px solid #888;

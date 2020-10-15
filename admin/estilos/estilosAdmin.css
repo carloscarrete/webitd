@@ -1,0 +1,45 @@
+@import url('../../estilos/estilos.css');
+
+#encabezadoAdmin{
+    text-align: left;
+}
+
+#logito{
+    width: 100px;
+    margin-right: 20px;
+}
+
+
+#ifHeader, #ifFooter{
+    width: 100%;
+    border: none;
+}
+
+#ifHeader{
+    height: 200px;
+}
+
+@media screen and (max-width:768px) { 
+  #ifHeader, #ifFooter{
+      height: 350px;
+      }
+  #encabezadoAdmin{
+      text-align: center;
+      display: block;
+  }
+  #logito{
+      width: 100px;
+  }
+  .x{
+    display: none;
+}
+}
+
+
+.table img{
+    cursor: pointer;
+}
+
+.x{
+    display: inline-block;
+}
