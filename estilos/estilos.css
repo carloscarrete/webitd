@@ -1,6 +1,7 @@
 body{
-    background: #ddd;
+    
 }
+
 
 header{
     /*font-size: 20pt;*/
@@ -11,6 +12,8 @@ header{
 #encabezado{
     /*font-size: 20pt;*/
     text-align: center;
+    color: black;
+    text-transform: uppercase;
 }
 
 #encabezado img{
@@ -61,6 +64,8 @@ footer div{
 #id01 form{
   padding: 40px;
 }
+
+
 
 /* Modal Content/Box */
 .modal-content {
