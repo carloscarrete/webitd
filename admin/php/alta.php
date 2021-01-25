@@ -2,12 +2,12 @@
 include("conexion.php");
 $categoria=$_POST['cat_name'];
 $descripcion=($_POST['descripcion']) ? $_POST['descripcion'] : 'NULL';
-$imagen="imgs/categorias/".$_POST['imgCat'];
+$nombreArchivo = $_FILES['imgCat']['name'];
 $catPadre=($_POST['cat_padre']) ? $_POST['cat_padre'] : 0;
 
 
 
-$sql = "INSERT INTO categorias (id, nombre, descripcion, imagen, cat_padre) VALUES (NULL,'$categoria', '$descripcion', '$imagen', '$catPadre');";
+$sql = "INSERT INTO categorias (id, nombre, descripcion, imagen, cat_padre) VALUES (NULL,'$categoria', '$descripcion', '$nombreArchivo', '$catPadre');";
 if(mysqli_query($enlace,$sql)){
     echo "Categoria agregada correctamente";
 }else{

@@ -1,7 +1,7 @@
 <?php
 include('conexion.php');
 
-$query = mysqli_query($enlace,"SELECT * FROM `categorias`");
+$query = mysqli_query($enlace,"SELECT * FROM `categorias` ORDER BY id");
 
 echo '<table class="table" id="miTabla">
                 <thead class="table-dark"> 
@@ -22,7 +22,7 @@ while($row=mysqli_fetch_array($query)){
     <th scope="row" class="x">'.$contador.'</th>
     <td>'.$row['nombre'].'</td>
     <td class="x">'.$row['descripcion'].'</td>
-    <td class="x"><img style="width:auto; height:50px;" src="../imgs/categorias/'.$row['imagen'].'"></td>
+    <td class="x"><img style="width:auto; height:50px;" src="./imgs/categorias/'.$row['imagen'].'"></td>
     <td>
     <a href="#"><img src="../img/edit.png" data-toggle="modal" data-target="#modalEdicion" 
     onclick="document.getElementById(&quot;nombreDes&quot;).value=&quot;'.$row['nombre'].'&quot;;
