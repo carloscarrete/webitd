@@ -1,0 +1,20 @@
+<categorias>
+<producto>
+<nombre>Teclado Gamer</nombre>
+<descripcion>Teclado mecánico con RGB</descripcion>
+<imagen>Teclado</imagen>
+<precio>680</precio>
+</producto>
+<producto>
+<nombre>Silla Gamer</nombre>
+<descripcion>Sillar gamer con RGB</descripcion>
+<imagen>Silla</imagen>
+<precio>3200</precio>
+</producto>
+<producto>
+<nombre>Procesador Intel i9 9700k</nombre>
+<descripcion>Procesador Intel i9 9700K</descripcion>
+<imagen>Intel</imagen>
+<precio>7500</precio>
+</producto>
+</categorias>
