@@ -1,3 +1,7 @@
+<?php
+include("./php/seguridad.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -26,8 +30,13 @@
 </head>
 
 <body>
-  <!--HEADER, NAV, Y NO SE QUE MAS -->
-  <iframe id="ifHeader" src="header.html" scrolling="no"></iframe>
+  <!--HEADER, NAV,  <iframe id="ifHeader" src="header.php" scrolling="no"></iframe>-->
+  <?php
+  error_reporting(0);
+
+      include('header.php');
+  ?>
+
   <main>
     <!-- Formulario "agregar categoría"-->
     <img id="btoAgregarCat" src="../img/agregar.png" onclick="document.getElementById('id01').style.display='block'">
@@ -40,27 +49,17 @@
       <!-- Modal Content -->
       <form class="modal-content animate" method="POST" enctype="multipart/form-data" id="formulario">
         <div class="form-group">
-          <label for="nombreCat">Nombre del producto:</label>
-          <input type="text" name="producto" id="producto" class="form-control">
+          <label for="nombreCat">Nombre de categoría:</label>
+          <input type="text" name="cat_name" id="nombreCat" class="form-control">
         </div>
         <div class="form-group">
           <label for="descCat">Descripción:</label>
-          <textarea name="descripcion" placeholder="Escribe la descripción del producto..." id="descripcion"
+          <textarea name="descripcion" placeholder="Escribe la descripción de la categoría..." id="descCat"
             class="form-control"></textarea>
         </div>
-        <div class="form-group">
-            <label for="descCat">Cantidad del producto:</label>
-            <textarea name="cantidad" placeholder="Escribe la cantidad del producto..." id="cantidad"
-              class="form-control"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="descCat">Precio del producto:</label>
-            <textarea name="precio" placeholder="Escribe el precio del producto..." id="precio"
-              class="form-control"></textarea>
-          </div>
 
         <div class="form-group">
-          <label for="cat_padre">Categoria del producto</label>
+          <label for="cat_padre">SubCategoria de</label>
           <div id="optCats"></div>
         </div>
 
@@ -80,7 +79,7 @@
     <!-- Fin Formulario nueva categoría -->
 
     <h2>
-      Productos
+      Categorías de productos
     </h2>
     <div class="alert alert-dismissible alert-info" id="msjbox" style="display: none; width: 100%;">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -151,7 +150,7 @@
       <div class="modal-dialog" >
         <div class="modal-content" style="width: 600px;" id="contenido">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Eliminar Producto
+            <h5 class="modal-title" id="exampleModalLabel">Eliminar Categoria
                "<span id="catBaja"></span>"
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -160,11 +159,11 @@
           </div>
 
           <form class="modal-content animate" enctype="multipart/form-data" id="formBajaCat">
-          ¿Estas Seguro que deseas eliminar este Producto?
+          ¿Estas Seguro que deseas eliminar esta Categoria?
           <input type="hidden" name="id" id="id">
                     <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal" id="noEliminar">No</button>
-            <button type="submit" class="btn btn-primary" id="btnEliminar">Si</button>
+            <button type="submit" class="btn btn-primary" id="btnEliminar" data-dismiss="modal">Si</button>
           </div>
           </form>
         </div>
@@ -175,7 +174,7 @@
 
       <!-- Modificar -->
       <form class="modal fade" id="modalEdicion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg role="document>
+        <div class="modal-dialog modal-lg role="document">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -186,12 +185,8 @@
                 <label>Nombre de categoria</label>
                 <input id="nombreDes" type="text" name="nombreDes" class="form-control input-sm">
                 <label>Descripción</label>
-                <input id="descripcionDes" type="text" name="descripcionDes"  class="form-control input-sm">
-                <label>Cantidad</label>
-                <input id="cantidadDes" type="text" name="cantidadDes"  class="form-control input-sm">
-                <label>Precio</label>
-                <input id="precioDes" type="text" name="precioDes"  class="form-control input-sm">
-                <label>Categoría de</label>
+                <input id="descripcion" type="text" name="descripcion"  class="form-control input-sm">
+                <label>Subcategoría de</label>
                 <div id="optCatsDos"></div>
                 <label>Imagen</label>
                 <input type="file" class="form-control input-sm" id="imgCatD" name="imgCatD">
@@ -238,7 +233,7 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>    
-  <script src="../js/scriptsProducto.js"></script>
+  <script src="../js/scripts.js"></script>
 </body>
 
 </html>

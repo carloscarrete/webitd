@@ -1,3 +1,6 @@
+<?php
+include("./php/seguridad.php");
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -40,46 +43,42 @@
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">Productos</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Computadoras</a>
-                        <a class="dropdown-item" href="#">Periféricos</a>
-                        <a class="dropdown-item" href="#">Componentes</a>
-                        <a class="dropdown-item" href="#">Accesorios</a>
-                        <a class="dropdown-item" href="#">Audio</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Promociones <span class="sr-only">(current)</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="./computadoras.php">Computadoras</a>
+                            <a class="dropdown-item" href="./perifericos.php">Periféricos</a>
+                            <a class="dropdown-item" href="./componentes.php">Componentes</a>
+                            <a class="dropdown-item" href="./accesorios.php">Accesorios</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./productos.php">Todo</a>
+                        </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Componentes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Software</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Galeria</a>
-                </li>
+                        <a class="nav-link" href="./componentes.php">Componentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./software.php">Software</a>
+                    </li>
+
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Buscar...">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-                    <img src="img/search.png"></button>
-            </form>
+                    <img src="../img/search.png"></button>
+                        <div class="nav-link" href="./index.php">  <?php echo "Hola ".$_SESSION["nombre"]." (<a href='./php/cerrar.php'>Salir</a>)"; ?> </div>
+                </form>
         </div>
     </nav>
 </header>
         <!--FIN DE LA NAVEGACIÓN-->
         <!--EL BREADCUM-->
 <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Home</li>
-    </ol>
+
 </nav>
 </body>
 </html>

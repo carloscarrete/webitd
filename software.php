@@ -40,10 +40,10 @@
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
+                    <li class="nav-item dropdown">
+                    <li class="nav-item">
                         <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
-                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Productos</a>
                             <div class="dropdown-menu">
@@ -85,7 +85,7 @@
         <div class="row">
                             <?php
                     include("./admin/php/conexion.php"); 
-                    $consulta="select * from productos";
+                    $consulta="select * from productos WHERE idCa=75";
                     $resultado = mysqli_query($enlace,$consulta);
                     while($row=mysqli_fetch_row($resultado)){
                         ?>

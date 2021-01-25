@@ -78,14 +78,13 @@
     <!--FIN DE LA NAVEGACIÓN-->
     <!--EL BREADCUM-->
     <nav aria-label="breadcrumb">
-
     </nav>
     <main>
     <div class="container mt-3">
         <div class="row">
                             <?php
                     include("./admin/php/conexion.php"); 
-                    $consulta="select * from productos";
+                    $consulta="select * from productos WHERE idCa=71";
                     $resultado = mysqli_query($enlace,$consulta);
                     while($row=mysqli_fetch_row($resultado)){
                         ?>
@@ -118,7 +117,6 @@
         <div>NAVEGACIÓN <br> Casa Redonda 606, 16 de Septiembre, 34030 Durango, Dgo.</div>
         <div>INFORMACIÓN <br> Somos la mejor empresa en Tecnologia en Durango, podemos realizar cualquier otización y armar un equipo a tus medidas</div>
     </footer>
-
 </body>
 
 </html>

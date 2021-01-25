@@ -40,37 +40,35 @@
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Inicio</a>
+                </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                             aria-haspopup="true" aria-expanded="false">Productos</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Computadoras</a>
-                            <a class="dropdown-item" href="#">Periféricos</a>
-                            <a class="dropdown-item" href="#">Componentes</a>
-                            <a class="dropdown-item" href="#">Accesorios</a>
-                            <a class="dropdown-item" href="#">Audio</a>
+                            <a class="dropdown-item" href="./computadoras.php">Computadoras</a>
+                            <a class="dropdown-item" href="./perifericos.php">Periféricos</a>
+                            <a class="dropdown-item" href="./componentes.php">Componentes</a>
+                            <a class="dropdown-item" href="./accesorios.php">Accesorios</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Otros</a>
+                            <a class="dropdown-item" href="./productos.php">Todo</a>
                         </div>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Promociones <span class="sr-only">(current)</span></a>
-                    </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Componentes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Software</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Galeria</a>
-                    </li>
+                      <a class="nav-link" href="./componentes.php">Componentes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./software.php">Software</a>
+                  </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Buscar...">
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">
                         <img src="img/search.png"></button>
-                        <img src="img/perfil.png"></button>
+                        <img src="img/perfil.png" data-toggle="modal" data-target="#loginModal"></button>
+                        <div id="loginSesion"></div>
                         <img src="img/carrito.png"></button>
 
                 </form>
@@ -116,9 +114,7 @@
     <!--FIN DE LA NAVEGACIÓN-->
     <!--EL BREADCUM-->
     <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item active" aria-current="page">Home</li>
-        </ol>
+
     </nav>
     <main>
         <div class="jumbotron">
@@ -137,14 +133,51 @@
                 <a class="btn btn-primary btn-lg" href="#" role="button">Ver más</a>
             </p>
         </div>
+
+
+        <div class="container">
+
+          </div>
+          
+          <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-title text-center">
+                    <h4>Iniciar Sesión</h4>
+                  </div>
+                  <div class="d-flex flex-column text-center">
+                    <form id="miLogin">
+                      <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electrónico...">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="pss" name="pss" placeholder="Tu contraseña...">
+                      </div>
+                      <button type="button" class="btn btn-info btn-block btn-round" data-dismiss="modal" id="acceder">Acceder</button>
+                    </form>
+                    
+                </div>
+              </div>
+                <div class="modal-footer d-flex justify-content-center">
+                </div>
+            </div>
+          </div>
+
     </main>
     <footer>
-        <div>CONTACTO</div>
-        <div>NAVEGACIÓN</div>
-        <div>INFORMACIÓN</div>
-        <div>REDES SOCIALES</div>
+        <div>CONTACTO <br>
+        Puede ponerse en contacto a traves de nuestro número de teléfono mediante WhatsApp el cual es 6181572410. Estamos disponisbles 24/7
+       para poder atender todas tus preguntas.</div>
+        <div>NAVEGACIÓN <br> Casa Redonda 606, 16 de Septiembre, 34030 Durango, Dgo.</div>
+        <div>INFORMACIÓN <br> Somos la mejor empresa en Tecnologia en Durango, podemos realizar cualquier otización y armar un equipo a tus medidas</div>
     </footer>
-
+    <script src="./admin/js/scripSesion.js"></script>
 </body>
 
 </html>

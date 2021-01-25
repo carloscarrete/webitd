@@ -154,3 +154,7 @@ function actualizar(e){
     xhttp.open("POST", "../admin/php/actualizar.php", true);
     xhttp.send(datos);
   }
+
+
+  sesionUser()
+

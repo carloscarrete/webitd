@@ -85,7 +85,7 @@
         <div class="row">
                             <?php
                     include("./admin/php/conexion.php"); 
-                    $consulta="select * from productos";
+                    $consulta="select * from productos WHERE idCa=74";
                     $resultado = mysqli_query($enlace,$consulta);
                     while($row=mysqli_fetch_row($resultado)){
                         ?>
